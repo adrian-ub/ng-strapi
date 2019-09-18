@@ -18,7 +18,7 @@ import { NgStrapiModule } from 'ng-strapi';
 @NgModule({
     imports: [
       NgStrapiModule.forRoot(
-        apiBaseURL,
+        'http://localhost:1337', //Url de strapi
         {
           cookie: {
             key: 'jwt',
