@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-strapi</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/stripe.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">ng-strapi</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="ngstrapi">NgStrapi</h1>
+<p><a href="https://github.com/adrian-ub/ng-strapi"><img src="https://img.shields.io/badge/Ng-Strapi-blue.png" alt="Angular Console Website" class="img-responsive"></a></p>
+<h2 id="instalar">Instalar</h2>
+<div><pre class="line-numbers"><code class="language-cmd">npm install ng-strapi</code></pre></div><h2 id="importar">Importar</h2>
+<p>Importar modulo <code>NgStrapiModule</code></p>
+<div><pre class="line-numbers"><code class="language-ts">import { NgStrapiModule } from &#39;ng-strapi&#39;;
+
+&#64;NgModule({
+    imports: [
+      NgStrapiModule.forRoot(
+        &#39;http://localhost:1337&#39;, //Url de strapi
+        {
+          cookie: {
+            key: &#39;jwt&#39;,
+            options: {
+              path: &#39;/&#39;
+            }
+          },
+          localStorage: {
+            key: &#39;jwt&#39;
+          }
+        });
+    ]
+})</code></pre></div><blockquote>
+<p>Se recomienda usar localStorage en <code>null</code></p>
+</blockquote>
+<h2 id="usar">Usar</h2>
+<div><pre class="line-numbers"><code class="language-ts">import { AuthService, HttpService } from &#39;ng-strapi&#39;;
+
+constructor(private auth: AuthServiceStrapi, private http: HttpService) {}</code></pre></div><h3 id="autenticación">Autenticación</h3>
+<h4 id="local">Local</h4>
+<div><pre class="line-numbers"><code class="language-ts">this.auth.login(username, password);</code></pre></div><h4 id="providers"><a href="https://strapi.io/documentation/guides/authentication.html#providers">Providers</a></h4>
+<div><pre class="line-numbers"><code class="language-ts">// Redirija a su usuario a la página de autenticación del proveedor.
+window.location = this.auth.getProviderAuthenticationUrl(&#39;facebook&#39;);</code></pre></div><p>Una vez autorizado, el proveedor redirigirá al usuario a su aplicación con un token de acceso en la URL.</p>
+<div><pre class="line-numbers"><code class="language-ts">// Complete la autenticación: (El SDK almacenará el token de acceso por usted)
+this.auth.authenticateProvider(&#39;facebook&#39;);</code></pre></div><h2 id="datos">Datos</h2>
+<p>Ahora puede buscar API privadas</p>
+<div><pre class="line-numbers"><code class="language-ts">this.http.getEntries&lt;User&gt;(&#39;users&#39;).subscribe(users =&gt; {
+  //Aquí trate sus datos
+});</code></pre></div><h2 id="api">API</h2>
+<h3 id="autenticación-api">Autenticación API</h3>
+<div><pre class="line-numbers"><code class="language-ts">register(data: any): Observable&lt;Authentication&gt;
+
+login(identifier: string, password: string): Observable&lt;Authentication&gt;
+
+getCurrentUser&lt;T&gt;(): Observable&lt;T&gt;
+
+isAuthenticated(): boolean
+
+logout(): boolean
+
+forgotPassword(email: string, url: string)
+
+resetPassword(code: string, password: string, passwordConfirmation: string)
+
+getProviderAuthenticationUrl(provider: Provider): string
+
+authenticateProvider(provider: Provider, params?: ProviderToken): Observable&lt;Authentication&gt;</code></pre></div><h3 id="http">Http</h3>
+<div><pre class="line-numbers"><code class="language-ts">getEntries&lt;T&gt;(contentTypePluralized: string, params?: HttpParams): Observable&lt;T[]&gt;
+
+getEntryCount(contentType: string, params?: HttpParams): Observable&lt;number&gt;
+
+getEntry&lt;T&gt;(contentTypePluralized: string, id: string): Observable&lt;T&gt;
+
+createEntry&lt;T&gt;(contentTypePluralized: string, data: T, params?: HttpParams): Observable&lt;T&gt;
+
+updateEntry&lt;T&gt;(contentTypePluralized: string, id: string, data: T, params?: HttpParams): Observable&lt;T&gt;
+
+deleteEntry&lt;T&gt;(contentTypePluralized: string, id: string): Observable&lt;T&gt;
+
+searchFiles(query: string): Observable&lt;File&gt;
+
+getFiles(params?: HttpParams): Observable&lt;File[]&gt;
+
+getFile(id: string): Observable&lt;File&gt;
+
+upload(data: FormData, params?: HttpParams): Observable&lt;File&gt;
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

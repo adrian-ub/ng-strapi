@@ -1,6 +1,6 @@
 # NgStrapi
 
-[![Angular Console Website](https://img.shields.io/badge/Ng-Strapi-blue.png)](/)
+[![Angular Console Website](https://img.shields.io/badge/Ng-Strapi-blue.png)](https://github.com/adrian-ub/ng-strapi)
 
 ## Instalar
 
@@ -64,4 +64,63 @@ Una vez autorizado, el proveedor redirigirá al usuario a su aplicación con un 
 ```ts
 // Complete la autenticación: (El SDK almacenará el token de acceso por usted)
 this.auth.authenticateProvider('facebook');
+```
+
+## Datos
+
+Ahora puede buscar API privadas
+
+```ts
+this.http.getEntries<User>('users').subscribe(users => {
+  //Aquí trate sus datos
+});
+```
+
+## API
+
+### Autenticación API
+
+```ts
+register(data: any): Observable<Authentication>
+
+login(identifier: string, password: string): Observable<Authentication>
+
+getCurrentUser<T>(): Observable<T>
+
+isAuthenticated(): boolean
+
+logout(): boolean
+
+forgotPassword(email: string, url: string)
+
+resetPassword(code: string, password: string, passwordConfirmation: string)
+
+getProviderAuthenticationUrl(provider: Provider): string
+
+authenticateProvider(provider: Provider, params?: ProviderToken): Observable<Authentication>
+```
+
+### Http
+
+```ts
+getEntries<T>(contentTypePluralized: string, params?: HttpParams): Observable<T[]>
+
+getEntryCount(contentType: string, params?: HttpParams): Observable<number>
+
+getEntry<T>(contentTypePluralized: string, id: string): Observable<T>
+
+createEntry<T>(contentTypePluralized: string, data: T, params?: HttpParams): Observable<T>
+
+updateEntry<T>(contentTypePluralized: string, id: string, data: T, params?: HttpParams): Observable<T>
+
+deleteEntry<T>(contentTypePluralized: string, id: string): Observable<T>
+
+searchFiles(query: string): Observable<File>
+
+getFiles(params?: HttpParams): Observable<File[]>
+
+getFile(id: string): Observable<File>
+
+upload(data: FormData, params?: HttpParams): Observable<File>
+
 ```
