@@ -90,7 +90,7 @@ export class AuthService {
     return !this.jwtService.isTokenExpired(this.getToken());
   }
 
-  public logout() {
+  public logout(): boolean {
     try {
       this.clearToken();
       return true;

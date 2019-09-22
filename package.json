@@ -1,6 +1,11 @@
 {
   "name": "ng-strapi",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository": "https://github.com/adrian-ub/ng-strapi",
+  "license": "MIT",
+  "script":{
+    "doc": "compodoc -p ./tsconfig.lib.json --hideGenerator --theme stripe --output ./docs --language es-ES --name ng-strapi -s -o -w"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.5",
     "@angular/core": "^8.2.5",
