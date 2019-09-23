@@ -65,6 +65,13 @@
             <code>src/lib/models/storeConfig.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Descripción</h3>
+            </p>
+            <p class="comment">
+                <p>Configuración para almacenar el Token</p>
+
+            </p>
 
 
         <section>
@@ -130,6 +137,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Configuración para Cookie</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -164,6 +177,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Configuración para localStorage</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -174,8 +193,17 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CookieConfig } from &#x27;./cookieConfig&#x27;;
 import { LocalStorageConfig } from &#x27;./localStorageConfig&#x27;;
 
+/**
+ * Configuración para almacenar el Token
+ */
 export interface StoreConfig {
+  /**
+   * Configuración para Cookie
+   */
   cookie?: CookieConfig | false;
+  /**
+   * Configuración para localStorage
+   */
   localStorage?: LocalStorageConfig | false;
 }
 </code></pre>

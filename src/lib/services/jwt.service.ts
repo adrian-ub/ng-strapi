@@ -1,12 +1,24 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * Tratamiento del token
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class JwtService {
 
+  /**
+   * Constructor
+   */
   constructor() { }
 
+  /**
+   * Saber si un token ha expirado
+   * @param token Token para saber si ha expirado
+   * @param offsetSeconds Segundos compensados
+   * @returns boolean
+   */
   public isTokenExpired(token: string, offsetSeconds?: number): boolean {
     if (token == null || token === '') {
         return true;
@@ -21,6 +33,11 @@ export class JwtService {
     return !(date.valueOf() > new Date().valueOf() + offsetSeconds * 1000);
   }
 
+  /**
+   * Saber la fecha de expiración de un Token
+   * @param token Token a ser tratado
+   * @returns Fecha o Null
+   */
   private getTokenExpirationDate(token: string): Date | null {
     let decoded: any;
     decoded = this.decodeToken(token);
@@ -35,8 +52,12 @@ export class JwtService {
     return date;
   }
 
+  /**
+   * Decodificar Token
+   * @param token Token a ser tratado
+   */
   private decodeToken(token: string): any {
-    if(token == null || token === '') {
+    if (token == null || token === '') {
       return null;
     }
 
@@ -54,6 +75,11 @@ export class JwtService {
     return JSON.parse(decoded);
   }
 
+  /**
+   * decodificación url Base64
+   * @param str Código
+   * @returns Cadena de texto
+   */
   private urlBase64Decode(str: string): string {
     let output = str.replace(/-/g, '+').replace(/_/g, '/');
     switch (output.length % 4) {
@@ -75,6 +101,11 @@ export class JwtService {
     return this.b64DecodeUnicode(output);
   }
 
+  /**
+   * Decodificación unicode base64
+   * @param str Código
+   * @returns decodeURIComponent
+   */
   private b64DecodeUnicode(str: any) {
     return decodeURIComponent(
       Array.prototype.map
@@ -85,6 +116,11 @@ export class JwtService {
     );
   }
 
+  /**
+   * decodificación base64
+   * @param str Código
+   * @returns Cadena de texto
+   */
   private b64decode(str: string): string {
     const chars =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
