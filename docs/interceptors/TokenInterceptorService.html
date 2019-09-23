@@ -61,6 +61,13 @@
             <code>src/lib/services/token-interceptor.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Descripción</h3>
+            </p>
+            <p class="comment">
+                <p>Interceptar las peticiones Http para enviar el Token de autenticación</p>
+
+            </p>
 
 
             <section>
@@ -102,12 +109,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="9" class="link-to-prism">src/lib/services/token-interceptor.service.ts:9</a></div>
+                                <div class="io-line">Definido en <a href="" data-line="12" class="link-to-prism">src/lib/services/token-interceptor.service.ts:12</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor por defecto</p>
+</div>
                             <div>
                                     <b>Parámetros :</b>
                                     <table class="params">
@@ -116,6 +125,7 @@
                                                 <td>Nombre</td>
                                                     <td>Tipo</td>
                                                 <td>Opcional</td>
+                                                    <td>Descripción</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -130,6 +140,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Servicio de Autenticación</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -167,14 +181,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="13"
-                            class="link-to-prism">src/lib/services/token-interceptor.service.ts:13</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="26"
+                            class="link-to-prism">src/lib/services/token-interceptor.service.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Intercepción de la petición</p>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -184,6 +200,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -198,6 +215,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Petición</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>next</td>
@@ -210,6 +231,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Como resolver la petición</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -221,7 +246,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Retorna la petición interceptada</p>
+
                     </div>
                 </td>
             </tr>
@@ -238,13 +264,26 @@ import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from &#x27;@angu
 import { Observable } from &#x27;rxjs&#x27;;
 import { AuthService } from &#x27;./auth.service&#x27;;
 
+/**
+ * Interceptar las peticiones Http para enviar el Token de autenticación
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class TokenInterceptorService implements HttpInterceptor {
 
+  /**
+   * Constructor por defecto
+   * @param auth Servicio de Autenticación
+   */
   constructor(private auth: AuthService) { }
 
+  /**
+   * Intercepción de la petición
+   * @param request Petición
+   * @param next Como resolver la petición
+   * @returns Retorna la petición interceptada
+   */
   intercept(request: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
 
     if (this.auth.getToken()) {

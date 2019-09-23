@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "repository": "https://github.com/adrian-ub/ng-strapi",
   "license": "MIT",
-  "script":{
+  "script": {
     "doc": "compodoc -p ./tsconfig.lib.json --hideGenerator --theme stripe --output ./docs --language es-ES --name ng-strapi -s -o -w"
   },
   "peerDependencies": {

@@ -60,8 +60,20 @@
             <code>src/lib/services/auth.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Descripción</h3>
+            </p>
+            <p class="comment">
+                <p>Servicio para la autenticación</p>
+
+            </p>
 
 
+            <p class="comment">
+                <h3>Ejemplo</h3>
+            </p>
+            <div class="io-description">
+            </div>
 
             <section>
     <h3 id="index">Índice</h3>
@@ -162,12 +174,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/lib/services/auth.service.ts:19</a></div>
+                                <div class="io-line">Definido en <a href="" data-line="26" class="link-to-prism">src/lib/services/auth.service.ts:26</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor predeterminado.</p>
+</div>
                             <div>
                                     <b>Parámetros :</b>
                                     <table class="params">
@@ -176,6 +190,7 @@
                                                 <td>Nombre</td>
                                                     <td>Tipo</td>
                                                 <td>Opcional</td>
+                                                    <td>Descripción</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -190,6 +205,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Tu Strapi host.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>storeConfig</td>
@@ -202,6 +221,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Extienda la configuración de storeConfig.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>http</td>
@@ -214,6 +237,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Servicios Http de Angular</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>jwtService</td>
@@ -226,6 +253,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Servicio para almacenar el token de autenticación</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -265,14 +296,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="131"
-                            class="link-to-prism">src/lib/services/auth.service.ts:131</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="194"
+                            class="link-to-prism">src/lib/services/auth.service.ts:194</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Autentique al usuario con el token presente en la URL (para el navegador) o en <code>params</code> (en Node.js)</p>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -282,6 +315,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -296,6 +330,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Proveedor</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>params</td>
@@ -308,6 +346,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Proveedor del token</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -319,7 +361,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Observable</p>
+
                     </div>
                 </td>
             </tr>
@@ -349,14 +392,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="169"
-                            class="link-to-prism">src/lib/services/auth.service.ts:169</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="239"
+                            class="link-to-prism">src/lib/services/auth.service.ts:239</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Borrar token</p>
+</div>
 
                     <div class="io-description">
                         <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -390,14 +435,20 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="102"
-                            class="link-to-prism">src/lib/services/auth.service.ts:102</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="151"
+                            class="link-to-prism">src/lib/services/auth.service.ts:151</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Envía un correo electrónico a un usuario con el enlace de su página de restablecimiento de contraseña.</p>
+<ul>
+<li>Este enlace contiene un código de parámetro de URL que se requiere para restablecer la contraseña del usuario.</li>
+<li>Recibido enlace url formato <a href="https://my-domain.com/rest-password?code=privateCode">https://my-domain.com/rest-password?code=privateCode</a>.</li>
+</ul>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -407,6 +458,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -421,6 +473,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Email a donde se enviara el correo electrónico</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>url</td>
@@ -433,6 +489,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Url a donde sera enviado para reestablecer la contraseña</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -444,7 +504,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Observable</p>
+
                     </div>
                 </td>
             </tr>
@@ -474,8 +535,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="84"
-                            class="link-to-prism">src/lib/services/auth.service.ts:84</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="118"
+                            class="link-to-prism">src/lib/services/auth.service.ts:118</a></div>
                 </td>
             </tr>
 
@@ -490,9 +551,17 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Obteniendo el usuario actual</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Devuelve : </b>    <code>Observable&lt;T&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Observable<T> con el usuario actual</p>
 
                     </div>
                 </td>
@@ -523,14 +592,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="127"
-                            class="link-to-prism">src/lib/services/auth.service.ts:127</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="184"
+                            class="link-to-prism">src/lib/services/auth.service.ts:184</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Recupere la URL del proveedor de conexión</p>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -540,6 +611,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -554,6 +626,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>&#39;Facebook&#39;, &#39;Twitter&#39;, etc..</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -565,7 +641,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Url del provider</p>
+
                     </div>
                 </td>
             </tr>
@@ -595,17 +672,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="41"
-                            class="link-to-prism">src/lib/services/auth.service.ts:41</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="59"
+                            class="link-to-prism">src/lib/services/auth.service.ts:59</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Obtener token</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Devuelve : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Cadena de texto con el Token</p>
 
                     </div>
                 </td>
@@ -636,17 +721,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="89"
-                            class="link-to-prism">src/lib/services/auth.service.ts:89</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="126"
+                            class="link-to-prism">src/lib/services/auth.service.ts:126</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Saber si hay un usuario autenticado.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Devuelve : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Boolean</p>
 
                     </div>
                 </td>
@@ -677,14 +770,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="65"
-                            class="link-to-prism">src/lib/services/auth.service.ts:65</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="94"
+                            class="link-to-prism">src/lib/services/auth.service.ts:94</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Inicie sesión obteniendo un token de autenticación.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -694,6 +789,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -708,6 +804,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Puede ser un correo electrónico o un nombre de usuario.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>password</td>
@@ -720,6 +820,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Contraseña</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -731,7 +835,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Token de usuario de autenticación y perfil</p>
+
                     </div>
                 </td>
             </tr>
@@ -761,17 +866,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="93"
-                            class="link-to-prism">src/lib/services/auth.service.ts:93</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="134"
+                            class="link-to-prism">src/lib/services/auth.service.ts:134</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Cerrar sesión</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Devuelve : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Si se cerró o no la sesión.</p>
 
                     </div>
                 </td>
@@ -802,14 +915,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="54"
-                            class="link-to-prism">src/lib/services/auth.service.ts:54</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="77"
+                            class="link-to-prism">src/lib/services/auth.service.ts:77</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Registra un nuevo usuario.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -819,6 +934,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -833,6 +949,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Array de todos los campos utilizado en su tabla users</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -844,7 +964,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Authentication User token and profile</p>
+
                     </div>
                 </td>
             </tr>
@@ -874,14 +995,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="112"
-                            class="link-to-prism">src/lib/services/auth.service.ts:112</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="166"
+                            class="link-to-prism">src/lib/services/auth.service.ts:166</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Restablecer la contraseña del usuario.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -891,6 +1014,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -905,6 +1029,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Es el código recibido en el correo</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>password</td>
@@ -917,6 +1045,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Nueva contraseña</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>passwordConfirmation</td>
@@ -929,6 +1061,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Confirmación de la nueva contraseña</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -940,7 +1076,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Observable</p>
+
                     </div>
                 </td>
             </tr>
@@ -970,14 +1107,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="151"
-                            class="link-to-prism">src/lib/services/auth.service.ts:151</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="218"
+                            class="link-to-prism">src/lib/services/auth.service.ts:218</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Guardar Token para poder recordarlo</p>
+</div>
 
                     <div class="io-description">
                         <b>Parámetros :</b>
@@ -987,6 +1126,7 @@
                                     <td>Nombre</td>
                                     <td>Tipo</td>
                                     <td>Opcional</td>
+                                    <td>Descripción</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1001,6 +1141,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Recuperado por registro o inicio de sesión</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>comesFromStorage</td>
@@ -1013,6 +1157,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Viene de almacenamiento</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1057,10 +1205,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/lib/services/auth.service.ts:19</a></div>
+                                    <div class="io-line">Definido en <a href="" data-line="26" class="link-to-prism">src/lib/services/auth.service.ts:26</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>URL del host Strapi</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -1083,13 +1237,27 @@ import { ProviderToken } from &#x27;../models/providerToken&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import * as Cookies from &#x27;js-cookie&#x27;;
 
+/**
+ * Servicio para la autenticación
+ * @Template T
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class AuthService {
 
+  /**
+   * URL del host Strapi
+   */
   private baseUrl: string;
 
+  /**
+   * Constructor predeterminado.
+   * @param baseUrl Tu Strapi host.
+   * @param storeConfig Extienda la configuración de storeConfig.
+   * @param http Servicios Http de Angular
+   * @param jwtService Servicio para almacenar el token de autenticación
+   */
   constructor(@Inject(&#x27;baseUrl&#x27;) baseUrl: string, @Inject(&#x27;config&#x27;) private storeConfig: StoreConfig, private readonly http: HttpClient,
               private jwtService: JwtService) {
 
@@ -1110,7 +1278,11 @@ export class AuthService {
     this.getToken();
   }
 
-  public getToken() {
+  /**
+   * Obtener token
+   * @returns Cadena de texto con el Token
+   */
+  public getToken(): string {
     let existingToken: string;
 
     if (this.storeConfig.cookie) {
@@ -1123,6 +1295,11 @@ export class AuthService {
     return existingToken;
   }
 
+  /**
+   * Registra un nuevo usuario.
+   * @param data Array de todos los campos utilizado en su tabla users
+   * @returns Authentication User token and profile
+   */
   public register(data: any): Observable&lt;Authentication&gt; {
     this.clearToken();
     const authentication &#x3D; this.http.post&lt;Authentication&gt;(&#x60;${this.baseUrl}/auth/local/register&#x60;, data);
@@ -1134,6 +1311,12 @@ export class AuthService {
     return authentication;
   }
 
+  /**
+   * Inicie sesión obteniendo un token de autenticación.
+   * @param identifier Puede ser un correo electrónico o un nombre de usuario.
+   * @param password Contraseña
+   * @returns Token de usuario de autenticación y perfil
+   */
   public login(identifier: string, password: string): Observable&lt;Authentication&gt; {
 
     this.clearToken();
@@ -1153,15 +1336,27 @@ export class AuthService {
 
   }
 
+  /**
+   * Obteniendo el usuario actual
+   * @param T Parametro para concordar con su interfaz
+   * @returns Observable&lt;T&gt; con el usuario actual
+   */
   public getCurrentUser&lt;T&gt;(): Observable&lt;T&gt; {
     return this.http.get&lt;T&gt;(&#x60;${this.baseUrl}/users/me&#x60;);
   }
 
-
+  /**
+   * Saber si hay un usuario autenticado.
+   * @returns Boolean
+   */
   public isAuthenticated(): boolean {
     return !this.jwtService.isTokenExpired(this.getToken());
   }
 
+  /**
+   * Cerrar sesión
+   * @returns Si se cerró o no la sesión.
+   */
   public logout(): boolean {
     try {
       this.clearToken();
@@ -1171,35 +1366,57 @@ export class AuthService {
     }
   }
 
+  /**
+   * Envía un correo electrónico a un usuario con el enlace de su página de restablecimiento de contraseña.
+   * Este enlace contiene un código de parámetro de URL que se requiere para restablecer la contraseña del usuario.
+   * Recibido enlace url formato https://my-domain.com/rest-password?code&#x3D;privateCode.
+   * @param email Email a donde se enviara el correo electrónico
+   * @param url Url a donde sera enviado para reestablecer la contraseña
+   * @returns Observable
+   */
   public forgotPassword(email: string, url: string) {
     this.clearToken();
-    const request &#x3D; this.http.post(&#x60;${this.baseUrl}/auth/local&#x60;, {
+    return this.http.post(&#x60;${this.baseUrl}/auth/local&#x60;, {
       email,
       url
     });
-
-    return request;
   }
 
+  /**
+   * Restablecer la contraseña del usuario.
+   * @param code Es el código recibido en el correo
+   * @param password Nueva contraseña
+   * @param passwordConfirmation Confirmación de la nueva contraseña
+   * @returns Observable
+   */
   public resetPassword(
     code: string,
     password: string,
     passwordConfirmation: string
   ) {
     this.clearToken();
-    const request &#x3D; this.http.post(&#x60;${this.baseUrl}/auth/reset-password&#x60;, {
+    return this.http.post(&#x60;${this.baseUrl}/auth/reset-password&#x60;, {
       code,
       password,
       passwordConfirmation
     });
-
-    return request;
   }
 
+  /**
+   * Recupere la URL del proveedor de conexión
+   * @param provider &#x27;Facebook&#x27;, &#x27;Twitter&#x27;, etc..
+   * @returns Url del provider
+   */
   public getProviderAuthenticationUrl(provider: Provider): string {
     return &#x60;${this.baseUrl}/connect/${provider}&#x60;;
   }
 
+  /**
+   * Autentique al usuario con el token presente en la URL (para el navegador) o en &#x60;params&#x60; (en Node.js)
+   * @param provider Proveedor
+   * @param params Proveedor del token
+   * @returns Observable
+   */
   public authenticateProvider(provider: Provider, params?: ProviderToken): Observable&lt;Authentication&gt; {
     this.clearToken();
     const headers &#x3D; new HttpHeaders();
@@ -1219,8 +1436,12 @@ export class AuthService {
     return authentication;
   }
 
-
-  private setToken(token: string, comesFromStorage?: boolean): void {
+  /**
+   * Guardar Token para poder recordarlo
+   * @param token Recuperado por registro o inicio de sesión
+   * @param comesFromStorage  Viene de almacenamiento
+   */
+  private setToken(token: string, comesFromStorage?: boolean) {
     if (!comesFromStorage) {
       if (this.storeConfig.localStorage) {
         window.localStorage.setItem(
@@ -1238,6 +1459,9 @@ export class AuthService {
     }
   }
 
+  /**
+   * Borrar token
+   */
   private clearToken(): void {
     if (this.storeConfig.localStorage) {
       window.localStorage.removeItem(this.storeConfig.localStorage.key);
