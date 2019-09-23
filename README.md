@@ -1,6 +1,6 @@
 # NgStrapi
 
-[![Angular Console Website](https://img.shields.io/badge/Ng-Strapi-blue.png)](https://github.com/adrian-ub/ng-strapi) [![Documentación](https://adrian-ub.github.io/ng-strapi/images/coverage-badge-documentation.svg)](https://adrian-ub.github.io/ng-strapi/)
+[![Ng Strapi](https://img.shields.io/badge/Ng-Strapi-blue.png)](https://github.com/adrian-ub/ng-strapi) [![Documentación](https://adrian-ub.github.io/ng-strapi/images/coverage-badge-documentation.svg)](https://adrian-ub.github.io/ng-strapi/)
 
 ## Instalar
 
