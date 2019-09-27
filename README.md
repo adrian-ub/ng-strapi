@@ -1,6 +1,7 @@
 # NgStrapi
 
 [![Ng Strapi](https://img.shields.io/badge/Ng-Strapi-blue.png)](https://github.com/adrian-ub/ng-strapi) [![Documentación](https://adrian-ub.github.io/ng-strapi/images/coverage-badge-documentation.svg)](https://adrian-ub.github.io/ng-strapi/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fadrian-ub%2Fng-strapi.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fadrian-ub%2Fng-strapi?ref=badge_shield)
 
 ## Instalar
 
@@ -124,3 +125,7 @@ getFile(id: string): Observable<File>
 upload(data: FormData, params?: HttpParams): Observable<File>
 
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fadrian-ub%2Fng-strapi.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fadrian-ub%2Fng-strapi?ref=badge_large)
