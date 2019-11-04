@@ -1,5 +1,7 @@
 # NgStrapi
 
+## Este paquete se encuentra desactualizado, por favor revisar [@salvaya/ng-strapi](https://github.com/SalvaYaColombia/ng-strapi)
+
 [![Ng Strapi](https://img.shields.io/badge/Ng-Strapi-blue.png)](https://github.com/adrian-ub/ng-strapi) [![Documentación](https://adrian-ub.github.io/ng-strapi/images/coverage-badge-documentation.svg)](https://adrian-ub.github.io/ng-strapi/)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fadrian-ub%2Fng-strapi.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fadrian-ub%2Fng-strapi?ref=badge_shield)
 
